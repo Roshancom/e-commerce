@@ -1,84 +1,83 @@
-
-#product-wrapper{
- padding: 0 15px;
- display: flex;
- flex-wrap: wrap;
-gap: 15px;
+.container{
+padding: 0 15px;
 }
 
 .product-card {
-    background: white;
-    width: 250px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-}
-.product-card:hover {
-    transform: scale(1.05);
-}
 .product-card img {
     width: 100%;
-    height: 150px;
+    height: 100px;
     object-fit: cover;
 }
+
 .product-details {
-    padding: 16px;
-    text-align: center;
+    padding: 0 16px;
 }
+
 .product-title {
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    margin-bottom: 12px;
 }
-.product-description {
-    font-size: 14px;
-    color: #666;
-    margin: 8px 0;
-}
-.product-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-}
+
 .add-to-cart {
-    display: block;
     width: 100%;
-    background: #007bff;
-    color: white;
+    margin-bottom: 10px;
     padding: 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 12px;
-    transition: background 0.3s;
+    font-size: 1rem;
 }
+
 .add-to-cart:hover {
-    background: #0056b3;
+    background-color: #0056b3;
 }
-    @media(max-width:1024px){
 
-        .product-card{
-            width: 300px;
-        }
+/* Grid Layout */
+#product-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns by default */
+    gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    #product-wrapper {
+        grid-template-columns: repeat(4, 1fr); /* Same 4 columns for 1024px screens */
     }
+}
 
-    @media(max-width:768px){
-
-        #product-wrapper{
-            gap: 10px;
-        }
-
-        .product-card{
-            width: 200px;
-        }
-
-        .product-card img{
-            height: 100px;
-        }
-
-        .product-details{
-            padding: 5px;
-        }
+@media (max-width: 768px) {
+    #product-wrapper {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for screens below 768px */
     }
+}
+
+@media (max-width: 480px) {
+    #product-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 column for very small screens */
+    }
+}

@@ -1,6 +1,7 @@
 import { footerData } from "./data.js";
 
 const footerDiv = document.getElementById("footer");
+console.log("footer is here", footerDiv)
 
 const getChildren = (data) => {
     return data.map(el => `<a href="${el.link}"><p>${el.title}</p></a>`).join("");
