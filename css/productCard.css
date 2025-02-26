@@ -1,5 +1,5 @@
-.container{
-padding: 0 15px;
+.product-wrapper{
+    margin-bottom: 10px;
 }
 
 .product-card {
@@ -58,26 +58,26 @@ padding: 0 15px;
 }
 
 /* Grid Layout */
-#product-wrapper {
+.product-wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns by default */
     gap: 16px;
 }
 
 @media (max-width: 1024px) {
-    #product-wrapper {
+    .product-wrapper {
         grid-template-columns: repeat(4, 1fr); /* Same 4 columns for 1024px screens */
     }
 }
 
 @media (max-width: 768px) {
-    #product-wrapper {
+    .product-wrapper {
         grid-template-columns: repeat(3, 1fr); /* 2 columns for screens below 768px */
     }
 }
 
 @media (max-width: 480px) {
-    #product-wrapper {
+    .product-wrapper {
         grid-template-columns: repeat(2, 1fr); /* 2 column for very small screens */
     }
 }

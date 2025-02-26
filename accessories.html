@@ -11,6 +11,8 @@
     <!-- style -->
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/productCard.css">
     
 </head>
 <body>  
@@ -46,11 +48,17 @@
     </header>
 
     <!-- Accessories PLACED -->
-   
+    <div class="accessories-wrapper">
+        <h3>Accessories</h3>
+        
+        <div id="accessories-product-wrapper" class="product-wrapper"></div>
+
+    </div>
 
     <div id="footer"></div>
     
     <script src="/orderPlaced.js"></script>
-    <script src="/footer.js"></script>
+    <script src="/footer.js" type="module"></script>
+    <script src="/accessories.js" type="module"></script>
 </body>
 </html>
