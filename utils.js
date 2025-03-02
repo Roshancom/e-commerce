@@ -4,7 +4,7 @@ export const getProductCard=(img, title, price, description, buy="Add to Cart") 
         <div class="product-details">
             <h2 class="product-title">${title}</h2>
             <p class="product-description">${description}</p>
-            <p class="product-price">${price}</p>
+            <p class="product-price">$${price}</p>
             <button class="add-to-cart">${buy}</button>
         </div>
     </div>`;
